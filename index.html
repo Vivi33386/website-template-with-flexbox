@@ -1,74 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="assets\favicon(128 × 128 ).png"
-    />
-    <title>Portfolio</title>
-  </head>
 
-  <body>
-    <div class="body-container">
-      <nav>
-        <div class="nav-container">
-          <!----------------------------------- LOGO --------------------------------------->
-          <div>
-            <img src="assets\logo.png" alt="logo" class="nav-logo" />
-          </div>
-          <!----------------------------------- MENU --------------------------------------->
-          <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About us</a>
-            <a href="#">Services</a>
-            <a href="#">Team</a>
-            <a href="#">Contact</a>
-          </div>
-          <!--------------------------------- SEARCH BAR ----------------------------------->
-          <form class="search-container">
-            <input class="searchbar" type="text" placeholder="Search..." />
-            <img
-              class="search-icon"
-              src="https://img.icons8.com/ios/50/null/search--v1.png"
-            />
-          </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="assets\favicon(128 × 128 ).png" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <div class="body-container">
+    <nav>
+      <div class="nav-container">
+        <!----------------------------------- LOGO --------------------------------------->
+        <div>
+          <img src="assets\logo.png" alt="logo" class="nav-logo" />
         </div>
-      </nav>
-      <!-------------------------------- HERO ---------------------------------->
-      <div class="hero">
-        <div class="overlay">
-          <div class="hero-text">
-            <h1>Hy, this is the DotUP!</h1>
-            <p class="hero-small-text">Check out our works!</p>
-            <button class="hero-button">Let's see</button>
+        <!----------------------------------- MENU --------------------------------------->
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">About us</a>
+          <a href="#">Services</a>
+          <a href="#">Team</a>
+          <a href="#">Contact</a>
+        </div>
+        <!--------------------------------- SEARCH BAR ----------------------------------->
+        <form class="search-container">
+          <input class="searchbar" type="text" placeholder="Search..." />
+          <img class="search-icon" src="https://img.icons8.com/ios/50/null/search--v1.png" />
+        </form>
+      </div>
+    </nav>
+    <!-------------------------------- HERO ---------------------------------->
+    <div class="hero">
+      <div class="overlay">
+        <div class="hero-text">
+          <h1>Hy, this is the DotUP!</h1>
+          <p class="hero-small-text">Check out our works!</p>
+          <button class="hero-btn btn">Let's see</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!----------------------------- About Section ------------------------------->
+  <div class="about-container">
+    <div class="about-row">
+      <img class="about-img about-box" src="assets\about.png" alt="about picture" />
+      <div class="about-box">
+        <h2 class="about-title">We Company</h2>
+        <p class="about-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum totam
+          culpa nemo, voluptates incidunt deserunt ipsam rerum recusandae
+          excepturi, autem aut molestiae dignissimos. Vitae architecto iure
+          accusantium qui placeat officiis?
+        </p>
+        <button class="btn">Let's see</button>
+      </div>
+    </div>
+
+    <!----------------------------- Service Section ------------------------------->
+    <div class="service-container">
+      <div class="service-row">
+        <div class="service-box">
+          <div class="img-box">
+            <img class="service-img" src="assets\about.png" alt="about picture" />
           </div>
+          <button class="service-btn btn">Let's see</button>
+        </div>
+
+        <div class="service-box">
+          <div class="img-box">
+            <img class="service-img" src="assets\about.png" alt="about picture" />
+          </div>
+          <button class="service-btn btn">Let's see</button>
         </div>
       </div>
     </div>
 
-    <!----------------------------- About Section ------------------------------->
-    <div class="about-container">
-      <div class="about-row">
-        <img
-          class="about-img about-box"
-          src="assets\about.png"
-          alt="about picture"
-        />
-        <div class="about-text about-box">
-          <h2 class="about-title">My Company</h2>
-          <p class="about-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum totam
-            culpa nemo, voluptates incidunt deserunt ipsam rerum recusandae
-            excepturi, autem aut molestiae dignissimos. Vitae architecto iure
-            accusantium qui placeat officiis?
-          </p>
+    <!----------------------------- Form Section ------------------------------------>
+    <section class="contact-form-container">
+      <form class="contact-form">
+        <div class="contact-form-header">
+          <h2 class="contact-form-title">Write to us</h2>
         </div>
-      </div>
-    </div>
-  </body>
+
+        <div class="form-body">
+          <div class="row">
+            <div class="input-group">
+              <label class="contact-form-label">First name </label>
+              <input class="contact-form-input" type="text" placeholder="Enter your first name" >
+            </div>
+            <div class="input-group">
+              <label class="contact-form-label">Last name</label>
+              <input class="contact-form-input" type="text" placeholder="Enter your last name">
+            </div>
+            <div class="input-group">
+              <label class="contact-form-label">Email </label>
+              <input class="contact-form-input" type="email" placeholder="Enter your email address">
+            </div>
+            <div class="input-group">
+              <label class="contact-form-label" for="">Message</label>
+              <textarea class="contact-form-input contact-form-textarea"> </textarea>
+            </div>
+            <div class="contact-form-footer">
+              <button class="btn contact-form-btn">Send</button>
+            </div>
+          </div>
+        </div>
+    </form>
+    </section>
+</body>
+
 </html>
