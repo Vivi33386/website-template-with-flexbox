@@ -19,13 +19,23 @@
           <img src="assets\logo.png" alt="logo" class="nav-logo" />
         </div>
         <!----------------------------------- MENU --------------------------------------->
-        <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="#">About us</a>
-          <a href="#">Services</a>
-          <a href="#">Team</a>
-          <a href="#">Contact</a>
+        <div class="menu-bg" id="menu-bg"></div>
+        <div id="menu">
+          <div id="menu-bar" onclick="menuOnClick()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <div class="nav-links nav" id="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Team</a>
+            <a href="#">Contact</a>
+          </div>
         </div>
+
+        <div class="menu-bg" id="menu-bg"></div>
         <!--------------------------------- SEARCH BAR ----------------------------------->
         <form class="search-container">
           <input class="searchbar" type="text" placeholder="Search..." />
@@ -91,7 +101,7 @@
           <div class="row">
             <div class="input-group">
               <label class="contact-form-label">First name </label>
-              <input class="contact-form-input" type="text" placeholder="Enter your first name" >
+              <input class="contact-form-input" type="text" placeholder="Enter your first name">
             </div>
             <div class="input-group">
               <label class="contact-form-label">Last name</label>
@@ -110,8 +120,9 @@
             </div>
           </div>
         </div>
-    </form>
+      </form>
     </section>
+    <script src="script.js"></script>
 </body>
 
 </html>

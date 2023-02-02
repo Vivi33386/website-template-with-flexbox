@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --primary-dark: rgb(55, 0, 179);
+  --primary-light: rgb(98, 0, 238);
+  --secondary: rgb(3, 218, 197);
+  --text: #fff;
+  --placeholder: #666;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,12 +18,11 @@ body {
   width: 100%;
   height: 100vh;
   font-family: "Sofia Sans", sans-serif;
-  background-color: rgb(55, 0, 179);
-  color: #fff;
+  background-color: var(--primary-dark);
+  color: var(--text);
 }
 
 /*******************************  NAV BAR  *******************************/
-
 .nav-logo {
   width: 300px;
   margin-top: -25px;
@@ -45,22 +52,103 @@ nav {
 
 .nav-links a {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 20px;
   padding: 3px;
   text-decoration: none;
-  color: #fff;
+  color: var(--text);
   font-size: 18px;
   font-weight: 500;
 }
 
+.nav-links a:hover {
+  color: var(--primary-light);
+  cursor: none;
+}
+
 .nav-links a:active {
-  color: rgb(98, 0, 238);
+  color: var(--primary-dark);
 }
 
 .search-container {
   display: none;
+}
+
+/**********************************************/
+
+#menu {
+  z-index: 2;
+}
+
+#menu-bar {
+  width: 45px;
+  height: 45px;
+  margin: 30px 0 20px 20px;
+}
+
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: var(--text);
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.nav {
+  transition: 0.3s ease;
+  display: none;
+}
+
+.menu-bg,
+#menu {
+  top: 0px;
+  left: 0;
+  position: absolute;
+}
+
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 30px 0 20px 20px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.change {
+  display: block;
+}
+
+.change .bar {
+  background-color: var(--text);
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+
+.change-bg {
+  width: 520px;
+  height: 460px;
+  transform: translate(-60%, -30%);
 }
 
 /**************************** HERO *********************************/
@@ -80,14 +168,14 @@ nav {
 h1 {
   font-size: 30px;
   font-weight: 700;
-  color: rgb(3, 218, 197);
+  color: var(--secondary);
   padding: 15px;
 }
 
 .hero-small-text {
   font-size: 20px;
   font-weight: 500;
-  color: #fff;
+  color: var(--text);
 }
 
 .hero-btn {
@@ -95,19 +183,19 @@ h1 {
 }
 
 .btn {
+  background-color: var(--secondary);
+  color: var(--primary-light);
   font-size: 15px;
-  background-color: rgb(3, 218, 197);
+  font-weight: 700;
   border-style: none;
   border-radius: 50px;
   padding: 6px 65px;
-  color: rgb(98, 0, 238);
-  font-weight: 700;
+  cursor: none;
 }
 
 .btn:hover {
-  background-color: rgb(98, 0, 238);
-  color: #fff;
-  cursor: pointer;
+  background-color: var(--primary-light);
+  color: var(--text);
 }
 
 /**************************** About Section *********************************/
@@ -123,17 +211,17 @@ h1 {
 }
 
 .about-box {
+  width: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  width: 300px;
-  height: 400px;
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(98, 0, 238, 0.8);
+  box-shadow: 0 0 5px var(--primary-light);
 }
 
 /**************************** Service Section *********************************/
@@ -158,7 +246,7 @@ h1 {
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(98, 0, 238, 0.8);
+  box-shadow: 0 0 5px var(--primary-light);
 }
 
 .service-img {
@@ -183,18 +271,18 @@ h1 {
   flex: 1;
   background-color: transparent;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(98, 0, 238, 0.8);
+  box-shadow: 0 0 5px var(--primary-light);
 }
 
 .contact-form-header {
   padding: 15px 0;
-  box-shadow: 0 0 5px rgba(98, 0, 238, 0.8);
+  box-shadow: 0 0 5px var(--primary-light);
 }
 
 .contact-form-title {
+  color: var(--text);
   font-size: 26px;
   text-align: center;
-  color: #fff;
 }
 
 .form-body {
@@ -216,7 +304,7 @@ h1 {
 .contact-form-label {
   font-size: 18px;
   font-weight: 500;
-  color: rgb(3, 218, 197);
+  color: var(--secondary);
   margin-bottom: 4px;
 }
 
@@ -225,8 +313,8 @@ h1 {
   height: 34px;
   padding-left: 10px;
   padding-right: 10px;
-  color: #666;
-  border: 1px solid rgb(55, 0, 179);
+  color: var(--placeholder);
+  border: 1px solid var(--primary-dark);
   border-radius: 4px;
   outline: none;
 }
@@ -238,18 +326,18 @@ h1 {
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #666;
+  color: var(--placeholder);
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #666;
+  color: var(--placeholder);
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #666;
+  color: var(--placeholder);
 }
 
 .contact-form-footer {
@@ -265,8 +353,54 @@ h1 {
 /*************************** RESPONSIVE PART **********************/
 
 @media screen and (min-width: 1024px) {
-  .search-container {
+  nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px 0 25px;
+  }
+
+  .nav-container {
+    flex-direction: row;
+    margin: 0 250px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+  }
+
+  .nav-links a:hover {
+    color: var(--secondary);
+    cursor: pointer;
+  }
+
+  .nav-logo {
+    width: 300px;
+    cursor: pointer;
+  }
+  /**************************** Hamburger menu *********************************/
+  .menu-bg {
+    display: none;
+  }
+
+  #menu-bar {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  #menu {
+    top: inherit;
+    left: inherit;
+    position: inherit;
+  }
+  /**************************** Search *********************************/
+  .search-container {
+    width: 300px;
+    display: flex;
+    justify-content: center;
     align-self: center;
   }
 
@@ -286,21 +420,7 @@ h1 {
     margin-top: 8px;
     cursor: pointer;
   }
-
-  .nav-container {
-    flex-direction: row;
-  }
-
-  .nav-links {
-    flex-direction: row;
-  }
-
-  .nav-links a:hover {
-    color: rgb(3, 218, 197);
-    font-size: 25px;
-    margin-right: 10px;
-  }
-
+  /**************************** Hero Section *********************************/
   .hero {
     height: 700px;
     padding: 10px;
@@ -320,15 +440,15 @@ h1 {
 
   .hero-small-text {
     font-size: 30px;
-    color: #fff;
+    color: var(--text);
   }
 
   .btn:hover {
-    background-color: rgb(98, 0, 238);
-    color: #fff;
+    background-color: var(--primary-light);
+    color: var(--text);
     cursor: pointer;
   }
-
+  /**************************** About Section *********************************/
   .about-container {
     margin-top: 50px;
     padding: 120px;
@@ -347,7 +467,7 @@ h1 {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(98, 0, 238, 0.8);
+    box-shadow: 0 0 5px var(--primary-light);
   }
 
   /**************************** Form Section *********************************/
